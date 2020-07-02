@@ -11,11 +11,17 @@ const PORT = process.env.port||3000;
 const apiRoutes = require("./routes/apiRoutes.js");
 const htmlRoutes = require("./routes/htmlRoutes.js");
 
-app.use (logger("dev"));
+
+//bodyparser Setup Middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use (logger("dev"));
+
+
 app.use(express.static("public"));
+
+//setup Routes
 
 app.use("/api", apiRoutes);
 app.use("/", htmlRoutes)
