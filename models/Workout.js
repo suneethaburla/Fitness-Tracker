@@ -38,15 +38,17 @@ const workoutSchema = new Schema( {
     ]
 },
 {
+     // include any virtual properties when data is requested
     toJSON: { virtuals: true }
 }
 
 )
-
-WorkoutSchema.virtual("totalDuration").get(function(){
+// adds a dynamically-created property to schema
+workoutSchema.virtual("totalDuration").get(function(){
+    // "reduce" array of exercises down to just the sum of their durations
     return this.exercises.reduce((sum, exercise) => {
         return sum + exercise.duration;
     }, 0);
 })
 
-module.exports = model("Workout", WorkoutSchema);
+module.exports = model("Workout", workoutSchema);

@@ -24,7 +24,7 @@ module.exports = {
             return res.status(200).json(workouts)
 
         } catch (error) {
-            return res.status(403).json({ e });
+            return res.status(403).json({ error });
 
         }
     },
