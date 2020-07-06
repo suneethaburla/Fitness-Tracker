@@ -1,19 +1,7 @@
 const { Workout } = require('./../models/index');
 
 module.exports = {
-    createWorkout: async (req, res) => {
-        try {
-            const exercise = await Workout.create({
-                type: "workout"
-
-            });
-            return res.status(200).json(exercise);
-        } catch (error) {
-            return res.status(403).json({ error });
-
-        }
-    },
-
+    
     getWorkout: async (req, res) => {
         try {
 
@@ -23,6 +11,19 @@ module.exports = {
             }
             return res.status(200).json(workouts)
 
+        } catch (error) {
+            return res.status(403).json({ error });
+
+        }
+    },
+
+    createWorkout: async (req, res) => {
+        try {
+            const exercise = await Workout.create({
+                type: "workout"
+
+            });
+            return res.status(200).json(exercise);
         } catch (error) {
             return res.status(403).json({ error });
 
@@ -63,4 +64,4 @@ module.exports = {
                 })
             }
     }
-}
+};

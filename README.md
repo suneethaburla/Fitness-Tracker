@@ -20,6 +20,8 @@ The user will be able to:
 
 A consumer will reach their fitness goals quicker when they track their workout progress.
 
+Here is the [link](https://fitness-tracker-mongo.herokuapp.com/) to the deployed application.
+
 # Technologies Used
 
  * HTML
