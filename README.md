@@ -22,6 +22,8 @@ A consumer will reach their fitness goals quicker when they track their workout 
 
 Here is the [link](https://fitness-tracker-mongo.herokuapp.com/) to the deployed application.
 
+![alt homePage](assets/images/homePage.png)
+![alt dashboard](assets/images/dashboard.png)
 
 
 # Technologies Used
