@@ -1,4 +1,4 @@
-# Workout Tracker
+# Fitness Tracker
 
 This application allows the user to track his/her daily workouts. The user will have option to add resistance, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, user will be able to track the distance traveled. This application uses Mongo database with a Mongoose schema and handles routes with Express.
 
@@ -21,6 +21,8 @@ The user will be able to:
 A consumer will reach their fitness goals quicker when they track their workout progress.
 
 Here is the [link](https://fitness-tracker-mongo.herokuapp.com/) to the deployed application.
+
+
 
 # Technologies Used
 

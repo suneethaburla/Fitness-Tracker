@@ -1,16 +1,16 @@
-const router = require('express').Router();
+const router = require("express").Router();
+const { getWorkout,createWorkout,getWorkoutsInRange,addExercise } = require("../controllers/workoutController");
 
-const { getWorkout, createWorkout, getWorkoutsInRange, addExercise} = require("./../controllers/workoutController")
-
-
+// has /api prepended to it
 router.route("/workouts")
-        .get(getWorkout)
-        .post(createWorkout)
+    .get(getWorkout)
+    .post(createWorkout)
 
 router.route("/workouts/range")
-        .get(getWorkoutsInRange)
+    .get(getWorkoutsInRange)
 
 router.route("/workouts/:id")
-        .put(addExercise)
+    .put(addExercise)
 
 module.exports = router;
+

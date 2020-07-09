@@ -19,7 +19,6 @@ let shouldNavigateAway = false;
 
 async function initExercise() {
   let workout;
-
   if (location.search.split("=")[1] === undefined) {
     workout = await API.createWorkout()
     console.log(workout)
@@ -27,14 +26,12 @@ async function initExercise() {
   if (workout) {
     location.search = "?id=" + workout._id;
   }
-
 }
 
 initExercise();
 
 function handleWorkoutTypeChange(event) {
   workoutType = event.target.value;
-
   if (workoutType === "cardio") {
     cardioForm.classList.remove("d-none");
     resistanceForm.classList.add("d-none");
@@ -45,26 +42,21 @@ function handleWorkoutTypeChange(event) {
     cardioForm.classList.add("d-none");
     resistanceForm.classList.add("d-none");
   }
-
   validateInputs();
 }
 
 function validateInputs() {
   let isValid = true;
-
   if (workoutType === "resistance") {
     if (nameInput.value.trim() === "") {
       isValid = false;
     }
-
     if (weightInput.value.trim() === "") {
       isValid = false;
     }
-
     if (setsInput.value.trim() === "") {
       isValid = false;
     }
-
     if (repsInput.value.trim() === "") {
       isValid = false;
     }
